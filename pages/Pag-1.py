@@ -33,29 +33,29 @@ with tab1:
 with tab2:
     st.text("Breve riassunto")
     st.text("Testo lungo")
-options = ("Ascoltano musica al lavoro", "Non ascoltano muscica a lavoro")
-grafico = st.radio("Vuoi sapere se le persone", options=options)
-if grafico == "Ascoltano musica al lavoro":
-    filtered_df = df[df['While working']=="Yes"]
-    plot_df = pd.DataFrame(filtered_df['Hours per day'].value_counts()).rename(columns={"Hours per day": "count"})
-    plot_df["Hours per day"] = plot_df.index.values
-    plot = alt.Chart(plot_df).mark_bar().encode(
-        x='Hours per day',
-        y='count',
-        tooltip=["Hours per day", "count"]
-    ).interactive()
-    st.altair_chart(plot, use_container_width=True)
+    options = ("Ascoltano musica al lavoro", "Non ascoltano muscica a lavoro")
+    grafico = st.radio("Vuoi sapere se le persone", options=options)
+    if grafico == "Ascoltano musica al lavoro":
+        filtered_df = df[df['While working']=="Yes"]
+        plot_df = pd.DataFrame(filtered_df['Hours per day'].value_counts()).rename(columns={"Hours per day": "count"})
+        plot_df["Hours per day"] = plot_df.index.values
+        plot = alt.Chart(plot_df).mark_bar().encode(
+            x='Hours per day',
+            y='count',
+            tooltip=["Hours per day", "count"]
+        ).interactive()
+        st.altair_chart(plot, use_container_width=True)
 
-else:
-    filtered_df = df[df['While working'] == "No"]
-    plot_df = pd.DataFrame(df['Hours per day'].value_counts()).rename(columns={"Hours per day": "count"})
-    plot_df["Hours per day"] = plot_df.index.values
-    plot = alt.Chart(plot_df).mark_bar().encode(
-        x='Hours per day',
-        y='count',
-        tooltip=["Hours per day", "count"]
-    ).interactive()
-    st.altair_chart(plot, use_container_width=True)
+    else:
+        filtered_df = df[df['While working'] == "No"]
+        plot_df = pd.DataFrame(df['Hours per day'].value_counts()).rename(columns={"Hours per day": "count"})
+        plot_df["Hours per day"] = plot_df.index.values
+        plot = alt.Chart(plot_df).mark_bar().encode(
+            x='Hours per day',
+            y='count',
+            tooltip=["Hours per day", "count"]
+        ).interactive()
+        st.altair_chart(plot, use_container_width=True)
 
 with tab3:
     st.text("Breve riassunto")
