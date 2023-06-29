@@ -1,6 +1,17 @@
 import streamlit as st
+import os
+from PIL import Image
 
 st.set_page_config(layout="wide")
+
+
+root_images_path = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)), "STEMDays_test", "images"
+)
+
+st.write = os.path.join(root_images_path, 'stemdays_photo.jpg')
+image = Image.open(os.path.join(root_images_path, 'stemdays_photo.jpg'))
+
 
 st.title("HYDRA.it")
 
@@ -9,14 +20,14 @@ st.subheader("Steam Days 2023")
 tab1, tab2 = st.tabs(["Introduzione", "Chi siamo"])
 
 with tab1:
-    st.subheader("Open Hydra.it")
-    st.markdown("""GUSTI MUSICALI IN RAPPORTO AI DISTURBI MENTALI\n
+    st.subheader("Gusti musicali in rapporto ai disturbi mentali")
+    st.markdown("""
     ★ANSIA
     ★DEPRESSIONE
     ★INSONNIA
     ★OCD
 
-    ANSIA
+    ANSIA\n
     I disturbi d’ansia sono un insieme di disturbi psichiatrici che condividono tra loro una caratteristica comune. In tutti infatti è presente una eccessiva paura o ansia che determina una serie di problematiche comportamentali associate come l’evitamento o l’eccessiva richiesta di rassicurazioni.
     I disturbi d’ansia sono un insieme di patologie psichiatriche che sono particolarmente comuni nella società occidentale rappresentando la patologia psichiatrica più diffusa nella popolazione generale. Questi disturbi  possono variare di intensità e gravità, portando anche a disabilità nelle forme più severe. Se non adeguatamente curati tendono a cronicizzare, con periodi di manifestazioni sintomatologiche alternate a periodi di parziale remissione.
     I disturbi d’ansia classificati dal DSM-5 sono:
@@ -28,10 +39,10 @@ with tab1:
     •Agorafobia
     •Disturbo d’ansia generalizzata
 
-    DEPRESSIONE
+    DEPRESSIONE\n
     Dopo l’ ansia, la depressione è il disturbo mentale più comune. Circa il 30% delle persone che ricorre al medico di base presenta sintomi di depressione, ma meno del 10% di esse ha una depressione grave. In genere, la depressione si sviluppa negli adolescenti, nei ventenni o nei trentenni, sebbene possa comparire a qualsiasi età, compresa l’infanzia.I disturbi depressivi sono caratterizzati da tristezza tanto grave o persistente da interferire con il funzionamento e, frequentemente, da diminuzione d'interesse o di piacere nelle attività. La causa precisa è sconosciuta ma probabilmente include una componente ereditaria, modificazioni nei livelli neurotrasmettitoriali, alterazioni della funzione neuroendocrina e fattori psicosociali. 
 
-    INSONNIA
+    INSONNIA\n
     Per insonnia s’intende la difficoltà ad addormentarsi o a restare addormentati ed una scarsa qualità del sonno. Quando la qualità del sonno è scarsa, al mattino non ci si sente riposati o freschi.
     L’insonnia può evolversi in EDS, per sonnolenza diurna eccessiva (excessive daytime sleepiness, EDS) s’intende avere molta difficoltà a restare svegli durante il giorno.
     Chi soffre di queste patologie può:
@@ -39,7 +50,7 @@ with tab1:
     Addormentarsi al lavoro o a scuola
     Correre un maggior rischio di avere un incidente d’auto
 
-    OCD
+    OCD\n
     l disturbo ossessivo-compulsivo è caratterizzato da pensieri ricorrenti, persistenti, non voluti e intrusivi o da immagini (ossessioni) e/o comportamenti ripetitivi o azioni mentali che i pazienti si sentono spinti a compiere (compulsioni) per cercare di diminuire o evitare l'ansia che provocano tali ossessioni. 
     Il disturbo ossessivo-compulsivo si manifesta più comunemente nelle donne rispetto agli uomini e colpisce circa il 1-2% della popolazione. L'età media di insorgenza del disturbo ossessivo-compulsivo è tra i 19 e i 20 anni, ma circa il 25% dei casi comincia entro i 14 anni. 
 
@@ -83,19 +94,15 @@ with tab1:
 
     Dall’analisi effettuate su 3 fattori musicali, le 5 scale di personalità del NEO-PI e le variabili demografiche sono risultate 3 variabili canoniche che hanno spiegato il 100% della varianza. La prima variabile legava le preferenze per la popular music, un basso livello di “apertura all’esperienza“, “estroversione” e scarso interesse per la musica; la seconda univa le preferenze per il rock e una tendenza a non preferire le altre musiche con poca competenza musicale, l’essere maschi e l’incoscienza; la terza variabile univa tutti i tipi di musica con la tendenza ad essere aperti all’esperienza ed estroversi.""")
 
-    st.image(
-        "https://th.bing.com/th/id/R.df2a3c2a813375dffbe0e2af7e1e66dc?rik=9lA6zlxEcILB0g&riu=http%3a%2f%2fwww.comicbookreligion.com%2fimg%2fh%2fu%2fHuey_Duck.jpg&ehk=9XEnkq7vb6mlZwyciwxvO%2fQ0NcUDZgMco8zTkhIyYJY%3d&risl=&pid=ImgRaw&r=0")
-    st.divider()
-    st.text("Nomi Cognomi, Ruoli ecc...")
 
 with tab2:
     st.subheader("Open Hydra.it")
     if st.button("Festeggia con noi", help="Prova a vedere cosa succede"):
         st.balloons()
-    st.text("""PRESENTAZIONE LAVORO
+    st.markdown("""PRESENTAZIONE LAVORO\n
 Questo sito è stato pensato e creato da un team di 10 ragazze tra i 16 e i 18 anni di Torino. L’idea è nata durante la partecipazione agli STEMDAYS, un campo di sole ragazze che ha l’obiettivo di abbattere i pregiudizi legati al ruolo femminile nel mondo della scienza e della tecnologia. Questa non è solo una pagina sul web che affronta il tema della musica in relazione ai disturbi mentali, ma il prodotto del lavoro di due settimane vissute insieme unite dal principio della collaborazione e dell’impegno al fine di portare al termine un progetto che possa essere utile e interessante per chi lo legge.""")
     st.image(
         "https://th.bing.com/th/id/R.df2a3c2a813375dffbe0e2af7e1e66dc?rik=9lA6zlxEcILB0g&riu=http%3a%2f%2fwww.comicbookreligion.com%2fimg%2fh%2fu%2fHuey_Duck.jpg&ehk=9XEnkq7vb6mlZwyciwxvO%2fQ0NcUDZgMco8zTkhIyYJY%3d&risl=&pid=ImgRaw&r=0")
     st.divider()
-    st.text("Nomi Cognomi, Ruoli ecc...")
+    st.image(image, caption='Il Team')
 
