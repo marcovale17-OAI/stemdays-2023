@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 #)
 
 #st.write = os.path.join(root_images_path, 'stemdays_photo.jpg')
-image_link =  'https://drive.google.com/file/d/13C1aasr-B4CVLFnil_xdNsMPnMp-TEjV/view?usp=drivesdk=' 
+image_link =  'https://drive.google.com/file/d/13C1aasr-B4CVLFnil_xdNsMPnMp-TEjV/view?pli=1' 
 image = Image.open(os.path.join(root_images_path, 'stemdays_photo.jpg'))
 
 
