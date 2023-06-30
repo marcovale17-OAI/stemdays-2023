@@ -5,12 +5,12 @@ from PIL import Image
 st.set_page_config(layout="wide")
 
 
-root_images_path = os.path.join(
-    os.path.dirname(os.path.dirname(__file__)), "STEMDays_test", "images"
-)
+#root_images_path = os.path.join(
+#    os.path.dirname(os.path.dirname(__file__)), "STEMDays_test", "images"
+#)
 
-st.write = os.path.join(root_images_path, 'stemdays_photo.jpg')
-image = Image.open(os.path.join(root_images_path, 'stemdays_photo.jpg'))
+#st.write = os.path.join(root_images_path, 'stemdays_photo.jpg')
+#image = Image.open(os.path.join(root_images_path, 'stemdays_photo.jpg'))
 
 
 st.title("HYDRA.it")
