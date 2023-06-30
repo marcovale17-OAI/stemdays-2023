@@ -5,18 +5,13 @@ from PIL import Image
 st.set_page_config(layout="wide")
 
 
-#root_images_path = os.path.join(
-#    os.path.dirname(os.path.dirname(__file__)), "STEMDays_test", "images"
-#)
-
-#st.write = os.path.join(root_images_path, 'stemdays_photo.jpg')
-image_link =  'https://drive.google.com/file/d/13C1aasr-B4CVLFnil_xdNsMPnMp-TEjV/view?pli=1' 
+root_images_path = os.path.join(os.path.dirname(__file__), "images")
 image = Image.open(os.path.join(root_images_path, 'stemdays_photo.jpg'))
 
 
 st.title("HYDRA.it")
 
-st.subheader("Steam Days 2023")
+st.subheader("Stem Days 2023")
 
 tab1, tab2 = st.tabs(["Introduzione", "Chi siamo"])
 
@@ -101,7 +96,7 @@ with tab2:
     if st.button("Festeggia con noi", help="Prova a vedere cosa succede"):
         st.balloons()
     st.markdown("""Questo sito è stato pensato e creato da un team di 10 ragazze tra i 16 e i 18 anni di Torino. L’idea è nata durante la partecipazione agli STEMDAYS, un campo di sole ragazze che ha l’obiettivo di abbattere i pregiudizi legati al ruolo femminile nel mondo della scienza e della tecnologia. Questa non è solo una pagina sul web che affronta il tema della musica in relazione ai disturbi mentali, ma il prodotto del lavoro di due settimane vissute insieme unite dal principio della collaborazione e dell’impegno al fine di portare al termine un progetto che possa essere utile e interessante per chi lo legge.""")
-    st.image(image_link, caption='Il Team')
+    st.image(image, caption='Il Team')
     st.divider()
 
 
