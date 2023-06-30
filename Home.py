@@ -101,8 +101,6 @@ with tab2:
         st.balloons()
     st.markdown("""PRESENTAZIONE LAVORO\n
     Questo sito è stato pensato e creato da un team di 10 ragazze tra i 16 e i 18 anni di Torino. L’idea è nata durante la partecipazione agli STEMDAYS, un campo di sole ragazze che ha l’obiettivo di abbattere i pregiudizi legati al ruolo femminile nel mondo della scienza e della tecnologia. Questa non è solo una pagina sul web che affronta il tema della musica in relazione ai disturbi mentali, ma il prodotto del lavoro di due settimane vissute insieme unite dal principio della collaborazione e dell’impegno al fine di portare al termine un progetto che possa essere utile e interessante per chi lo legge.""")
-    st.image(
-        "https://th.bing.com/th/id/R.df2a3c2a813375dffbe0e2af7e1e66dc?rik=9lA6zlxEcILB0g&riu=http%3a%2f%2fwww.comicbookreligion.com%2fimg%2fh%2fu%2fHuey_Duck.jpg&ehk=9XEnkq7vb6mlZwyciwxvO%2fQ0NcUDZgMco8zTkhIyYJY%3d&risl=&pid=ImgRaw&r=0")
     st.image(image, caption='Il Team')
     st.divider()
 
