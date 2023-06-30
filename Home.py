@@ -106,5 +106,4 @@ with tab2:
     st.image(image, caption='Il Team')
     st.divider()
 
-st.text('ciao')
 
